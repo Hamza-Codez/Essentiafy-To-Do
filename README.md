@@ -13,7 +13,7 @@ Responsive Design 📱💻
 Essentiafy+ is fully responsive, ensuring a smooth user experience across all screen sizes. Below are examples of the app on different devices:
 
 Desktop View
-![Desktop View](https://github.com/Hamza-Codez/Essentiafy/raw/main/images/desktop-view.png)
+![desktop-view](/images/desktop-view.png)
 
 Tablet View
 ![Tablet View](./images/Tablet-veiw.png)
