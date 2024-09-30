@@ -48,12 +48,11 @@ const Todo = () => {
     });
   }
   const btnStyle =
-    `rounded-full px-2 py-1 border-none hover:cursor-pointer text-semibold text-slate-200 text-[0.67rem]               
-    lg:text-[0.77rem] lg:rounded-md lg:py-[0.44rem] lg:px-3
-    md:text-[0.7rem] md:rounded-xl md:py-[0.44rem] md:px-4
-    sm:text-[0.64rem] sm:rounded-xl sm:py-[0.4rem] sm:px-4`;
+    `rounded-full px-[0.5rem] py-[0.31rem] border-none hover:cursor-pointer text-semibold text-slate-200 text-[0.685rem]  tracking-widest           
+    lg:text-[0.76rem] lg:rounded-md lg:py-[0.44rem] lg:px-3 lg:text-[0.77rem] lg:tracking-widest
+    md:text-[0.7rem] md:rounded-xl md:py-[0.44rem] md:px-4 md:text-[0.75] md:tracking-widest
+    sm:text-[0.64rem] sm:rounded-xl sm:py-[0.4rem] sm:px-4 sm:text-[0.71] sm:tracking-wider`;
   const aTagStyle = ' no-underline text-gray-300 text-sm font-semibold hover:text-gray-300'
-  const flax = 'flex items-center space-x-2'
   return (
     <>
       <div className="flex flex-col text-center justify-center font-sans bg-gradient-to-r  from-slate-500 via-slate-300 to-slate-500
@@ -82,14 +81,14 @@ const Todo = () => {
           onChange={inputtaskHandler}
         />
         <button
-          className={`${btnStyle} bg-gradient-to-tr  from-slate-800 to-blue-400  my-3 px-[1rem] py-[0.6rem]  rounded-full
-            lg:py-[0.77rem] lg:px-[1.9rem] lg:rounded-full
-           md:py-[0.67rem] md:px-[1.4rem] md:rounded-full
-           sm:py-[0.67rem] sm:px-[1.4rem] sm:rounded-full
+          className={`${btnStyle} bg-gradient-to-tr  from-slate-800 to-blue-400  my-3 px-[1rem] py-[0.53rem]  rounded-full tracking-widest
+            lg:py-[0.68rem] lg:px-[1.1rem] lg:rounded-full lg:tracking-widest
+           md:py-[0.67rem] md:px-[1.3rem] md:rounded-full md:tracking-wider
+           sm:py-[0.62rem] sm:px-[1.1rem] sm:rounded-full sm:tracking-widest
           `}
           onClick={addtaskHandler}
         >
-          Add
+          Plus+
         </button>
       </div>
       <ul className="list-none mb-[8rem]
@@ -97,9 +96,9 @@ const Todo = () => {
         {tasks.map((task, index) => (
           <li key={index}>
             <span
-              className="flex flex-1 flex-col items-center h-[3.4rem] font-sans text-[0.98rem] font-semibold text-gray-600 px-5 py-4 ml-[-1rem] my-1 mb-2
+              className="flex flex-1 flex-col items-center h-[3.4rem] font-sans text-[0.98rem] font-semibold text-gray-600 px-5 py-4 ml-[-1.5rem] my-1 mb-2
                 mx-4 justify-between border-solid border-2 border-gray-400 rounded-tr-xl rounded-bl-xl bg-gradient-to-b from-gray-400 to-slate-200 
-                lg:text-[1.18rem] lg:font-semibold lg:mr-[3.5rem] lg:ml-[1rem] lg:my-2 lg:rounded-md lg:flex-row lg:h-7
+                lg:text-[1.17rem] lg:font-semibold lg:mr-[3.5rem] lg:ml-[1rem] lg:my-2 lg:rounded-md lg:flex-row lg:h-7
                 md:text-[1.011rem] md:font-medium md:mr-[4rem] md:ml-[1.7rem] md:my-2 md:rounded-xl md:mb-2 md:flex-row md:h-6
                 sm:text-[0.87rem] sm:rounded-2xl sm:mb-2 sm:flex-row sm:h-4 
                 "
@@ -111,13 +110,13 @@ const Todo = () => {
                   `}
                   onClick={() => PriorTask(index)}
                 >
-                  Upgrade ☝️
+                  Prioritize ☝️
                 </button>
                 <button
                   className={`${btnStyle} bg-gradient-to-tr from-slate-700 to-slate-300`}
                   onClick={() => downgradeTask(index)}
                 >
-                  Down Grade ⬇️
+                  Demote ⬇️
                 </button>
                 <button
                   className={`${btnStyle} bg-gradient-to-tr from-red-700  to-red-300`}
